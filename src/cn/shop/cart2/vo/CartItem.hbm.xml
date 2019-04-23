@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.shop.cart2.vo.CartItem" table="CartItem">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="subtotal"/>
+		<property name="number"/>
+	    
+	    <!-- many开头的是代表该表持有外键 -->        
+        <many-to-one  name="product" lazy="false"  class="cn.shop.product.vo.Product"  unique="true">   
+            <column name="pid" />   
+        </many-to-one>  
+        
+         <!-- many开头的是代表该表持有外键 -->   
+        <many-to-one  name="cart" class="cn.shop.cart2.vo.Cart"  unique="true">   
+            <column name="cartid" />   
+        </many-to-one>    
+        
+           
+	</class>
+</hibernate-mapping>

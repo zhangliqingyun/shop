@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.shop.comments.vo.Comments" table="Comments" >
+    	<id name="id">
+    		<generator class="native"></generator>
+    	</id>
+    	<property name="content" type="text" length="65536"/>  
+    	<property name="cdate"/>             
+        <!-- product属性，本类与Product的多对一关系 -->
+        <many-to-one name="product" class="cn.shop.product.vo.Product" column="productid" lazy="false"></many-to-one>
+        <!-- user属性，本类与User的对对一关系 -->       
+        <many-to-one name="user" class="cn.shop.user.vo.User" column="userid" lazy="false"></many-to-one>
+    </class>
+</hibernate-mapping>

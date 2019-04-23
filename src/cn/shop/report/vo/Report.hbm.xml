@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.shop.report.vo.Report" table="Report" >
+    	<id name="id">
+    		<generator class="native"></generator>
+    	</id>
+    	<property name="type"/>
+    	<property name="content"/>
+    	<property name="reportdate" type="date"/>  
+    	<property name="reportname"/>
+    	<property name="productid"/>
+    	<property name="isdeal"/>
+    </class>
+</hibernate-mapping>

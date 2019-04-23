@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.shop.cart2.vo.Cart" table="Cart">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="total"/>
+
+	    <!-- cartItems属性，本类与CartItem的一对多关系-->
+	    <set name="cartItems" lazy="false">
+	        <key column="cartid"></key>
+	        <one-to-many class="cn.shop.cart2.vo.CartItem"/>  
+	    </set>
+	    
+	     <!-- many开头的是代表该表持有外键 -->   
+        <many-to-one  name="user" class="cn.shop.user.vo.User"  unique="true">   
+            <column name="uid" />     
+        </many-to-one>  
+	
+	</class>
+</hibernate-mapping>

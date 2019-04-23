@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.shop.product.vo.Product" table="product">
+		<id name="pid">
+			<generator class="native"/>
+		</id>
+		<property name="pname"/>
+		<property name="market_price"/>
+		<property name="shop_price"/>
+		<property name="image"/>
+		<property name="pdesc"/>
+		<property name="is_hot"/>
+		<property name="pdate"/>
+		<property name="is_top"/>   
+		<property name="shelves"/>  
+		<property name="num"/>  
+		<many-to-one name="categorySecond" lazy="false" class="cn.shop.categorysecond.vo.CategorySecond" column="csid"/>
+	    <!-- comments属性，本类与Comments的一对多关系 -->
+	    <set name="comments" lazy="false">
+	        <key column="productid"></key>
+	        <one-to-many  class="cn.shop.comments.vo.Comments"/>   
+	    </set>
+	    
+	    <!-- user属性，本类与User的多对一关系 -->
+	    <many-to-one name="user" class="cn.shop.user.vo.User" lazy="false" column="uid"/>      
+	
+	    <!-- cartItem属性，本类与CartItem的一对一关系 -->
+	    <one-to-one name="cartItem"  class="cn.shop.cart2.vo.CartItem" lazy="false" property-ref="product"></one-to-one>
+	
+	</class>
+</hibernate-mapping>

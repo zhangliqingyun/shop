@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.shop.user.vo.User" table="User" >
+    	<id name="uid">
+    		<generator class="native"></generator>
+    	</id>
+    	<property name="username"/>
+    	<property name="password"/>
+    	<property name="name"/>
+    	<property name="email"/>
+    	<property name="phone"/>
+    	<property name="addr"/>
+    	<property name="state"/>
+    	<property name="code"/>  
+    	
+    	<!-- comments属性，本类与Comments的一对多关系 -->
+    	<set name="comments" lazy="false">
+    	   <key column="userid"></key>
+    	   <one-to-many class="cn.shop.comments.vo.Comments"/>   
+    	</set>
+    	
+    	<!-- products属性，本类与Product的一对多关系 -->
+    	<set name="products" lazy="false">    
+    	    <key column="uid"/>
+    	    <one-to-many class="cn.shop.product.vo.Product"/>  
+    	</set>
+    	
+    	<!-- cart属性，本类和Cart的一对一关系 -->
+    	<one-to-one name="cart"  class="cn.shop.cart2.vo.Cart" lazy="false" property-ref="user"></one-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="shop" location="0,0" size="0,0">
+    <action name="cartItem_*" location="0,0" size="0,0">
+      <result name="deleteSuccess" />
+    </action>
+    <action name="cart2_*" location="0,0" size="0,0">
+      <result name="addCartSuccess">
+        <resourceEdge source="addCartSuccess" routing="0" target="addcartsuccess.jsp" />
+      </result>
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="cartlist.jsp" />
+      </result>
+      <result name="clearCartSuccess" />
+    </action>
+    <action name="comments_*" location="0,0" size="0,0">
+      <result name="saveSuccess" />
+      <result name="savereplySuccess" />
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="list.jsp" />
+      </result>
+      <result name="deleteSuccess" />
+      <result name="addplypage">
+        <resourceEdge source="addplypage" routing="0" target="addplypage.jsp" />
+      </result>
+    </action>
+    <action name="report_*" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="list.jsp" />
+      </result>
+      <result name="soldout" />
+    </action>
+    <action name="index" location="0,0" size="0,0">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+    </action>
+    <action name="convenience_*" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="conveniencelist.jsp" />
+      </result>
+      <result name="deleteSuccess" />
+      <result name="updateSuccess" />
+      <result name="saveSuccess" />
+      <result name="editSuccess">
+        <resourceEdge source="editSuccess" routing="0" target="edit.jsp" />
+      </result>
+      <result name="show">
+        <resourceEdge source="show" routing="0" target="show.jsp" />
+      </result>
+    </action>
+    <action name="company" location="0,0" size="0,0">
+      <result name="company">
+        <resourceEdge source="company" routing="0" target="company.jsp" />
+      </result>
+    </action>
+    <action name="user_*" location="0,0" size="0,0">
+      <result name="registPage">
+        <resourceEdge source="registPage" routing="0" target="regist.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="regist.jsp" />
+      </result>
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="login.jsp" />
+      </result>
+      <result name="loginPage">
+        <resourceEdge source="loginPage" routing="0" target="login.jsp" />
+      </result>
+      <result name="loginSuccess" />
+      <result name="quit" />
+      <result name="checkcodeFaile">
+        <resourceEdge source="checkcodeFaile" routing="0" target="regist.jsp" />
+      </result>
+      <result name="manager">
+        <resourceEdge source="manager" routing="0" target="manager.jsp" />
+      </result>
+      <result name="delete" />
+    </action>
+    <action name="checkImg" location="0,0" size="0,0" />
+    <action name="product_*" location="0,0" size="0,0">
+      <result name="findByPid">
+        <resourceEdge source="findByPid" routing="0" target="product.jsp" />
+      </result>
+      <result name="findByCid">
+        <resourceEdge source="findByCid" routing="0" target="productList.jsp" />
+      </result>
+      <result name="findByCsid">
+        <resourceEdge source="findByCsid" routing="0" target="productList.jsp" />
+      </result>
+      <result name="addproductpage">
+        <resourceEdge source="addproductpage" routing="0" target="addproduct.jsp" />
+      </result>
+      <result name="saveSuccess" />
+      <result name="search">
+        <resourceEdge source="search" routing="0" target="searchproduct.jsp" />
+      </result>
+    </action>
+    <action name="cart_*" location="0,0" size="0,0">
+      <result name="addCart">
+        <resourceEdge source="addCart" routing="0" target="addCart.jsp" />
+      </result>
+      <result name="clearCart">
+        <resourceEdge source="clearCart" routing="0" target="addCart.jsp" />
+      </result>
+      <result name="deleteCart">
+        <resourceEdge source="deleteCart" routing="0" target="addCart.jsp" />
+      </result>
+      <result name="myCart">
+        <resourceEdge source="myCart" routing="0" target="addCart.jsp" />
+      </result>
+    </action>
+    <action name="order_*" location="0,0" size="0,0">
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="order.jsp" />
+      </result>
+      <result name="findByUidSuccess">
+        <resourceEdge source="findByUidSuccess" routing="0" target="orderList.jsp" />
+      </result>
+      <result name="findByOidSuccess">
+        <resourceEdge source="findByOidSuccess" routing="0" target="order.jsp" />
+      </result>
+      <result name="updateStateSuccess" />
+    </action>
+    <action name="adminUser_*" location="0,0" size="0,0">
+      <result name="loginFail">
+        <resourceEdge source="loginFail" routing="0" target="index.jsp" />
+      </result>
+      <result name="loginSuccess">
+        <resourceEdge source="loginSuccess" routing="0" target="home.jsp" />
+      </result>
+      <result name="logout">
+        <resourceEdge source="logout" routing="0" target="index.jsp" />
+      </result>
+    </action>
+    <action name="adminCategory_*" location="0,0" size="0,0">
+      <result name="findAll">
+        <resourceEdge source="findAll" routing="0" target="list.jsp" />
+      </result>
+      <result name="saveSuccess" />
+      <result name="deleteSuccess" />
+      <result name="editSuccess">
+        <resourceEdge source="editSuccess" routing="0" target="edit.jsp" />
+      </result>
+      <result name="updateSuccess" />
+    </action>
+    <action name="adminCategorySecond_*" location="0,0" size="0,0">
+      <result name="findAllSuccess">
+        <resourceEdge source="findAllSuccess" routing="0" target="list.jsp" />
+      </result>
+      <result name="addSuccess">
+        <resourceEdge source="addSuccess" routing="0" target="add.jsp" />
+      </result>
+      <result name="saveSuccess" />
+      <result name="deleteSuccess" />
+      <result name="editSuccess">
+        <resourceEdge source="editSuccess" routing="0" target="edit.jsp" />
+      </result>
+      <result name="updateSuccess" />
+    </action>
+    <action name="adminProduct_*" location="0,0" size="0,0">
+      <result name="findAllSuccess">
+        <resourceEdge source="findAllSuccess" routing="0" target="list.jsp" />
+      </result>
+      <result name="addSuccess">
+        <resourceEdge source="addSuccess" routing="0" target="add.jsp" />
+      </result>
+      <result name="saveSuccess" />
+      <result name="deleteSuccess" />
+      <result name="editSuccess">
+        <resourceEdge source="editSuccess" routing="0" target="edit.jsp" />
+      </result>
+      <result name="updateSuccess" />
+      <result name="veto" />
+      <result name="pass" />
+      <result name="checkListPage">
+        <resourceEdge source="checkListPage" routing="0" target="checklist.jsp" />
+      </result>
+    </action>
+    <action name="adminOrder_*" location="0,0" size="0,0">
+      <result name="findAllSuccess">
+        <resourceEdge source="findAllSuccess" routing="0" target="list.jsp" />
+      </result>
+      <result name="findOrderItemSuccess">
+        <resourceEdge source="findOrderItemSuccess" routing="0" target="OrderItem.jsp" />
+      </result>
+      <result name="updateStateSuccess" />
+    </action>
+    <action name="returnMessage_*" location="0,0" size="0,0">
+      <result name="addpage">
+        <resourceEdge source="addpage" routing="0" target="addreturnmessage.jsp" />
+      </result>
+      <result name="save" />
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="returnmessagelist.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="index.jsp" path="/WEB-INF/jsp/index.jsp" location="0,0" size="0,0" />
+  <webResource name="conveniencelist.jsp" path="/admin/convenience/conveniencelist.jsp" location="0,0" size="0,0" />
+  <webResource name="edit.jsp" path="/admin/convenience/edit.jsp" location="0,0" size="0,0" />
+  <webResource name="company.jsp" path="/WEB-INF/jsp/company.jsp" location="0,0" size="0,0" />
+  <webResource name="regist.jsp" path="/WEB-INF/jsp/regist.jsp" location="0,0" size="0,0" />
+  <webResource name="login.jsp" path="/WEB-INF/jsp/login.jsp" location="0,0" size="0,0" />
+  <webResource name="manager.jsp" path="/WEB-INF/jsp/manager.jsp" location="0,0" size="0,0" />
+  <webResource name="product.jsp" path="/WEB-INF/jsp/product.jsp" location="0,0" size="0,0" />
+  <webResource name="productList.jsp" path="/WEB-INF/jsp/productList.jsp" location="0,0" size="0,0" />
+  <webResource name="addCart.jsp" path="/WEB-INF/jsp/addCart.jsp" location="0,0" size="0,0" />
+  <webResource name="order.jsp" path="/WEB-INF/jsp/order.jsp" location="0,0" size="0,0" />
+  <webResource name="orderList.jsp" path="/WEB-INF/jsp/orderList.jsp" location="0,0" size="0,0" />
+  <webResource name="index.jsp" path="/admin/index.jsp" location="0,0" size="0,0" />
+  <webResource name="home.jsp" path="/admin/home.jsp" location="0,0" size="0,0" />
+  <webResource name="list.jsp" path="/admin/category/list.jsp" location="0,0" size="0,0" />
+  <webResource name="edit.jsp" path="/admin/category/edit.jsp" location="0,0" size="0,0" />
+  <webResource name="list.jsp" path="/admin/categorySecond/list.jsp" location="0,0" size="0,0" />
+  <webResource name="add.jsp" path="/admin/categorySecond/add.jsp" location="0,0" size="0,0" />
+  <webResource name="edit.jsp" path="/admin/categorySecond/edit.jsp" location="0,0" size="0,0" />
+  <webResource name="list.jsp" path="/admin/product/list.jsp" location="0,0" size="0,0" />
+  <webResource name="add.jsp" path="/admin/product/add.jsp" location="0,0" size="0,0" />
+  <webResource name="edit.jsp" path="/admin/product/edit.jsp" location="0,0" size="0,0" />
+  <webResource name="list.jsp" path="/admin/order/list.jsp" location="0,0" size="0,0" />
+  <webResource name="OrderItem.jsp" path="/admin/order/OrderItem.jsp" location="0,0" size="0,0" />
+  <webResource name="addreturnmessage.jsp" path="/WEB-INF/jsp/addreturnmessage.jsp" location="0,0" size="0,0" />
+  <webResource name="returnmessagelist.jsp" path="/admin/returnmessage/returnmessagelist.jsp" location="0,0" size="0,0" />
+  <webResource name="list.jsp" path="/admin/report/list.jsp" location="0,0" size="0,0" />
+  <webResource name="show.jsp" path="/WEB-INF/jsp/show.jsp" location="0,0" size="0,0" />
+  <webResource name="list.jsp" path="/admin/comments/list.jsp" location="0,0" size="0,0" />
+  <webResource name="addplypage.jsp" path="/admin/comments/addplypage.jsp" location="0,0" size="0,0" />
+  <webResource name="addproduct.jsp" path="/admin/product/addproduct.jsp" location="0,0" size="0,0" />
+  <webResource name="checklist.jsp" path="/admin/product/checklist.jsp" location="0,0" size="0,0" />
+  <webResource name="searchproduct.jsp" path="/WEB-INF/jsp/searchproduct.jsp" location="0,0" size="0,0" />
+  <webResource name="addcartsuccess.jsp" path="/WEB-INF/jsp/addcartsuccess.jsp" location="0,0" size="0,0" />
+  <webResource name="cartlist.jsp" path="/WEB-INF/jsp/cartlist.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+
